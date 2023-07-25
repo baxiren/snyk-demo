@@ -1,5 +1,5 @@
 name: Snyk for Python3
-on: push
+on: [push, pull_request]
 jobs:
   security:
     runs-on: ubuntu-latest
@@ -8,16 +8,9 @@ jobs:
       security-events: write
       actions: read
     steps:
-      - uses: actions/checkout@master
-      - name: Snyk - Dependency test
-        uses: snyk/actions/python-3.9@master
-        continue-on-error: true
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        with:
-          args: --sarif-file-output=snyk.sarif
+      - uses: actions/checkout@dev
       - name: Snyk - Code Test
-        uses: snyk/actions/python-3.9@master
+        uses: snyk/actions/python-3.9@dev
         continue-on-error: true
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}

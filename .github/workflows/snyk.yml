@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@dev
       - name: Snyk - Code Test
-        uses: snyk/actions/python-3.9@dev
+        uses: snyk/actions/python-3.9@master
         continue-on-error: true
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}

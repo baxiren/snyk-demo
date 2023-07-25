@@ -9,13 +9,6 @@ jobs:
       actions: read
     steps:
       - uses: actions/checkout@master
-      - name: Snyk - Dependency test
-        uses: snyk/actions/python-3.9@master
-        continue-on-error: true
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        with:
-          args: --sarif-file-output=snyk.sarif
       - name: Snyk - Code Test
         uses: snyk/actions/python-3.9@master
         continue-on-error: true

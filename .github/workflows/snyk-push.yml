@@ -1,4 +1,4 @@
-name: Snyk for Python3
+name: Snyk security scan - PUSH
 on: push
 jobs:
   security:

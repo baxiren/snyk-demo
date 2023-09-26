@@ -2,7 +2,7 @@ name: Snyk security scan
 on: 
   push:
     paths:
-      - ./added_dir
+      - 'added_dir/**
 jobs:
   security:
     runs-on: ubuntu-latest

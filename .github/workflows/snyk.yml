@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Snyk - Code Test
-        working_directory: ./added_dir
+        working-directory: ./added_dir
         uses: snyk/actions/python-3.9@master
         continue-on-error: true
         env:

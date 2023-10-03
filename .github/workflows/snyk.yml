@@ -6,6 +6,9 @@ on:
 jobs:
   borg-snyk-code-test:
     runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      security-events: write    
     steps:
       - uses: actions/checkout@master
       - name: The Borg - Snyk Code Test

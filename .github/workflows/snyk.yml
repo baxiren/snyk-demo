@@ -1,4 +1,4 @@
-name: Snyk security scan
+name: The Borg - Snyk Code Test
 on: 
   push:
     paths:

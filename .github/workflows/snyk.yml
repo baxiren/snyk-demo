@@ -4,7 +4,7 @@ on:
     paths:
       - 'cell/pollerbear/rtkpollerbear/rtkpollerbear/integrations/**'
 jobs:
-  security:
+  borg-snyk-code-test:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -12,7 +12,7 @@ jobs:
       actions: read
     steps:
       - uses: actions/checkout@master
-      - name: Snyk - Code Test
+      - name: The Borg - Snyk Code Test
         uses: snyk/actions/python-3.9@master
         continue-on-error: true
         env:

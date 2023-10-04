@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: The Borg - Snyk Code Test
-        uses: rtkwlf-actions/snyk/python-3.9@0.4.0
+        uses: snyk/actions/python-3.9@0.4.0
         continue-on-error: true
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}

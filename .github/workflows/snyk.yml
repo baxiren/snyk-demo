@@ -1,14 +1,15 @@
 name: The Borg - Snyk Code Test
 on: 
-  push:
+  pull_request:
     paths:
       - 'cell/pollerbear/rtkpollerbear/rtkpollerbear/integrations/**'
 jobs:
   borg-snyk-code-test:
     runs-on: ubuntu-latest
     permissions:
+      contents: read
+      security-events: write
       actions: read
-      security-events: write    
     steps:
       - uses: actions/checkout@master
       - name: The Borg - Snyk Code Test
